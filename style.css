@@ -1,0 +1,22 @@
+body{
+    padding-bottom: 10px;
+    padding-left: 20%;
+    padding-right: 20%
+}
+.line{
+    background-color:#42b0f5;
+    height: 3px;
+}
+th{
+    border-bottom: 1px solid black;
+    text-align: left;
+}
+td{
+     border-bottom: 1px solid black;
+    text-align: left;
+    padding-right: 60px;
+}
+.shadow{
+    background-color:lightgray;
+   padding: 1px;
+}

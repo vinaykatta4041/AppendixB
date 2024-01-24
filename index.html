@@ -1,0 +1,297 @@
+<html>
+    <head>
+        <title>Migration Guide</title>
+          <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="line"></div>
+        <h1 style="color: #42b0f5;"><b>Appendix B. NetView Samples Overview</b></h1>
+        <br>
+        <p>All of the sample definitions listed in this book (and some not listed) are contained on the NetView distribution media. These definitions are distributed as members of the following data sets:<br>
+•	NETVIEW.V6R3M0.CNMSAMP<br>
+•	NETVIEW.V6R3M0.DSIPARM<br>
+•	NETVIEW.V6R3M0.DSIPRF<br>
+•	NETVIEW.V6R3M0.SAQNPARM<br>
+•	NETVIEW.V6R3M0.SAQNSAMP<br>
+•	NETVIEW.V6R3M0.SDSIMSG1<br>
+•	NETVIEW.V6R3M0.SDSIOPEN<br>
+Each samples name begins with AAU, BNJ, CNMB, CNMCM, CNMS, DSI, DUIF, EKG, EZL, FKV, FKX, or FLC, and can have a maximum length of 8 characters. The last four or five characters of all samples vary. Table 17 on page 101 summarizes the samples distributed with the NetView program.
+</p>
+        <p><i>Table 17. Summary of Sample Members</i></p>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>AAU<i>xxxxx</i></td>
+                <td>Session monitor samples</td>Hardware monitor samples
+            </tr>
+            <tr>
+                <td>application.yml</td>Sense code descriptions
+                <td>Sample setup for server configuration, provided in the NetView ZFS. </td>
+            </tr>
+            <tr>
+                <td>BNJxxxxx</td>
+                <td>Hardware monitor samples</td>
+            </tr>
+            <tr>
+                <td>CNMBnnn</td>
+                <td>Sense code descriptions</td>
+            </tr>Command Statistics samples
+            <tr>
+                <td>CNMCMxxx</td>MVS IDCAMS statement members
+                <td>Command definitions</td>
+            </tr>
+            <tr>
+                <td>CNMSAAnn</td>
+                <td>SAA DM members</td>
+            </tr>
+            <tr>
+                <td>CNMSCSxx</td>
+                <td>Command Statistics samples</td>
+            </tr>
+            <tr>
+                <td>CNMSInnn</td>
+                <td>MVS IDCAMS statement members</td>
+            </tr>
+            <tr>
+                <td>CNMSJHnn</td>
+                <td>GMFHS installation samples</td>
+            </tr>
+            <tr>
+                <td>CNMSJInn</td>
+                <td>MVS IEBCOPY procedures and control statements</td>
+            </tr>
+            <tr>
+                <td>CNMSJMnn</td>
+                <td>Miscellaneous MVS samples</td>
+            </tr>
+            <tr>
+                <td>CNMSJSNF</td>
+                <td>A new PROCEDURE JCL needed to create Sniffer trace format data sets.</td>
+            </tr>
+            <tr>
+                <td>CNMSCSxx</td>
+                <td>Command Statistics samples</td>
+            </tr>
+            <tr>
+                <td>CNMS42nn / CNMS43nn	 </td>
+                <td>High-level language (HLL) PL/I samples</td>
+            </tr>
+            <tr>
+                <td>CNMS42nn / CNMS44nn </td>
+                <td>High-level language (HLL) C samples</td>
+            </tr>
+            <tr>
+                <td>CNMS42nn / CNMS45nn	</td>
+                <td>Assembler samples</td>
+            </tr>
+        </table>
+       <p>Appendix C, “NetView Samples Reference,” on page 119 lists all the samples on the distribution media and a brief description of each sample. Use CNMSJ003 to copy sample members into the correct libraries where they can be used by the NetView and VTAM programs. Sometimes, you must rename the samples to meet NetView or VTAM program requirements. For example, VTAM start options are distributed on the samples media in CNMS0010. However, the VTAM program requires that you name this member ATCSTR00. CNMSJ003 copies CNMS0010 into the VTAM library as ATCSTR00.</p>
+        <table>
+            <tr>
+                <th>If you want information about..	</th>
+                <th>Refer to...</th>
+            </tr>
+            <tr>
+                <td>HLL samples</td>
+                <td>	IBM Z NetView Programming: PL/I and C</td>
+            </tr>
+            <tr>
+                <td>Assembler samples</td>
+                <td>	IBM Z NetView Programming: Assembler</td>
+            </tr>
+            <tr>
+                <td>REXX samples</td>
+                <td>	IBM Z NetView Programming: REXX and the NetView Command List Language</td>
+            </tr>
+            <tr>
+                <td>Automation samples</td>
+                <td>	IBM Z NetView Automation Guide</td>
+            </tr>
+        </table>
+        <p>The sample network uses a standard naming convention for the NCP and VTAM definitions.
+
+</p>
+    <h2 style="color: #42b0f5;"><b>VTAM Major Node Names</b></h2>  
+    <div class="line"></div>
+        <p>Table 18 on page 102 lists the names of the VTAM major nodes in the sample network (NETA).<br>
+Table 18. Summary of Sample VTAM Major Nodes at A01MPU in Network NETA
+</p>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>	Distributed As	</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>A01APPLS</td>
+                <td>CNMS0013</td>
+                <td>		Defines the NetView program application major node</td>
+            </tr>
+            <tr>
+                <td>A01CDRM	</td>
+                <td>CNMS0014</td>
+                <td>Defines cross-domain resource mangers in NETA</td>
+            </tr>
+            <tr>
+                <td>A01CDRS1</td>
+                <td>CNMS0014</td>
+                <td>Defines cross-domain resource mangers in NETB</td>
+            </tr>
+            <tr>
+                <td>A01LOCAL</td>
+                <td>CNMS0014</td>
+                <td>Defines cross-domain resources</td>
+            </tr>
+            <tr>
+                <td>A01MVS</td>
+                <td>CNMS0014</td>
+                <td>A01CDRS1	CNMS0089	Defines independent LU cross-domain resources</td>
+            </tr>
+            <tr>
+                <td>A01NVAS</td>
+                <td>CNMS0014</td>
+                <td>Defines local non-SNA terminals</td>
+            </tr>
+            <tr>
+                <td>A01USER</td>
+                <td>CNMS0014</td>
+                <td>Defines MVS applications</td>
+            </tr>
+            <tr>
+                <td>A04NTRI</td>
+                <td>CNMS0014</td>
+                <td>Defines the NetView access services applications</td>
+            </tr>
+            <tr>
+                <td>CNMCON01</td>
+                <td>CNMS0014</td>
+                <td>Defines path table for host A01MPU</td>
+            </tr>
+            <tr>
+                <td>CTCA0102</td>
+                <td>CNMS0014</td>
+                <td>Defines local SNA terminals</td>
+            </tr>
+            <tr>
+                <td>CTCA0103</td>
+                <td>CNMS0014</td>
+                <td>Defines various application programs</td>
+            </tr>
+            
+        </table>
+        <p>Table 19 on page 103 lists the names of the VTAM major nodes in the sample network (NETB). The actual samples are not shown in this book, however, their NETA equivalents are listed in the table for easy reference.<br><i>Table 19. Summary of Sample VTAM Major Nodes at B01MPU in Network NETB</i></p>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Distributed as</th>
+                <th>Description</th>
+                <th>NETA Equivalent</th>
+            </tr>
+            <tr>
+                <td>ATCCONB1</td>
+                <td>CNMS0102</td>
+                <td>Defines configuration start list</td>
+                <td>ATCCON01</td>
+            </tr>
+            <tr>
+                <td>ATCCONB1</td>
+                <td>CNMS0103</td>
+                <td>Defines VTAM start options</td>
+                <td>ATCCON01</td>
+            </tr>
+            <tr>
+                <td>B01ADJ</td>
+                <td>CNMS0104</td>
+                <td>Defines adjacent SSCPs for VTAM to query</td>
+                <td>A01ADJ</td>
+            </tr>
+            <tr>
+                <td>B01ADJ</td>
+                <td>CNMS0105</td>
+                <td>Defines the NetView program application major node</td>
+                <td>A01ADS</td>
+            </tr>
+            <tr>
+                <td>B01CDRM</td>
+                <td>CNMS0106</td>
+                <td>Defines cross-domain resource managers in NETA</td>
+                <td>A01ADM</td>
+            </tr>
+            <tr>
+                <td>B01CDRSC</td>
+                <td>CNMS0107</td>
+                <td>Defines cross-domain resource managers in NETB</td>
+                <td>A01CDRSC</td>
+            </tr>
+            <tr>
+                <td>B01LOCAL</td>
+                <td>CNMS0108</td>
+                <td>Defines local non-SNA terminals</td>
+                <td>A01CDRSL</td>
+            </tr>
+            <tr>
+                <td>B01MVS</td>
+                <td>CNMS0109</td>
+                <td>Defines MVS applications</td>
+                <td>A01CDRS</td>
+            </tr>
+            <tr>
+                <td>B01PATH</td>
+                <td>CNMS0102</td>
+                <td>Defines path table for host B01MPU</td>
+                <td>A01PATH</td>
+            </tr>
+            <tr>
+                <td>B30NTRI</td>
+                <td>CNMS0100</td>
+                <td>Defines dial deck coded for NTRI lines</td>
+                <td>A01PATI</td>
+            </tr>
+        </table>
+        <h2 style="color: #42b0f5;"><b>VTAM Definitions	</b></h2>
+        <div class="line"></div>
+        <p>You can modify the sample network definitions to fit your network. This process includes modifying VTAM definition statements and VTAM tables.</p>
+        <h2 >VTAM Definition Statements</h2>
+        <p>After installing the NetView program, begin to define the network, starting with VTAM definitions. Define the programs, devices, and paths to other nodes in the network. Define these by coding major nodes.
+A major node is a representation of a set of resources. Specifically, a major node is a set of VTAM definition statements. For MVS, a VTAM major node is a member of the partitioned data set identified on the VTAMLST DD statement in the VTAM start procedure.
+When you have coded the necessary major nodes, the VTAM operator can activate or deactivate resources in the network by activating and deactivating major or minor nodes. (A minor node is one resource in a major node.) For example, at A01MPU, local terminals are defined in the major node named A01LOCAL. When the VTAM program is active, the VTAM operator can use the following VARY ACT command:
+</p>
+        <div class="shadow">
+            <p>v net,act,id=a01local</p>
+        </div>
+        <p>Conversely, the operator can deactivate these terminals by entering the following VARY INACT command:</p>
+        <div class="shadow">
+            <p>v net,inact,id=a01local</p>
+        </div>
+        <h3><b>Configuration Lists</b></h3>
+        <p>The major nodes you have defined are not processed by the VTAM program until you activate them. Use one of the following two ways to activate these nodes:<br>
+1.	Have the VTAM operator enter a VARY ACT command for each major node.<br>
+2.	Include the major node names in a configuration list. When you start the VTAM program, it automatically activates every node that you have listed if CONFIG=xx is coded in your start list, where xx is the last two characters of your configuration list name (ATCCONxx).
+</p>
+        <h3><b>VTAM Start Options</b></h3>
+        <p>VTAM start options define such things as buffer pools, major nodes to be activated when the VTAM program is started, the network name, and the identifier given to the VTAM program for the host subarea. The only VTAM start options that you need to code are SSCPID=n, NETID=n, and SSCPNAME=n. However, most users need to specify some options, especially the host subarea (HOSTSA=n). All subareas within a network must be unique.<br>
+Code VTAM start options in a major node named ATCSTRyy, where yy is specified by the user. The default value is 00. You can code start options in more than one file. The VTAM program always processes the file named ATCSTR00. You can add additional start options in another file as was done in the sample network.<br>
+Start options that apply to all hosts in the network are coded in major node ATCSTR00. The VTAM program processes default values first. Default values are overridden by ATCSTRyy. Start options specific to host A01MPU are coded in major node ATCSTR01. Both nodes are processed when the VTAM program
+</p>
+        <div class="shadow">
+            <p>s cnmnet.net,,,(list=01)</p>
+        </div>
+        <p>If the same option is coded in both ATCSTR00 and ATCSTR01, the option coded in ATCSTR01 takes precedence.<br>
+The VTAM start options for B01MPU in NETB are coded in ATCSTRB1. To start the VTAM program in host B01MPU, enter:
+</p>
+        <div class="shadow">
+            <p>s cnmnet.net,,,(list=B1)</p>
+        </div>
+            <h3><b>ATCSTR00 (CNMS0010) (VTAM Startup Options)</b></h3>
+            <p>ATCSTR00, the default start option file, is on the distribution media. If you want to use these definitions in your network:<br>
+1.	Check the PPOLOG start option. This option is used to specify whether messages are sent to the network log. The sample network uses the default value of PPOLOG=NO. If you are running a release of the VTAM program before V3R3, change this value to PPOLOG=YES to keep the status monitor panels in the NetView program accurate.<br><br>
+2.	Review the default values for each start option. Default values are coded for all start options except TRACE and IOBUF.<br>
+3.	Check the TRACE start option. This option indicates which functions are traced when the VTAM program is started. OPT=ALL was coded here, meaning all functions are traced when the VTAM program is started. To conserve storage, delete the OPT=ALL operand or specify a specific function that you want to trace.<br>
+4.	Check the IOBUF start option. This option is the message pool in fixed storage and is used for input/ output data. For the sample network, this option is set to 256 bytes. This represents the value of the UNITSZ operand on the NETA definition statements in A04A54C (CNMS0065) and A31A54C (CNMS0066). The value of the UNITSZ operand on the NETB definition statement in B30A54C (CNMS0109) is set to 384 bytes.
+</p>
+        <h3><b>ATCSTR01 (CNMS0007) (Start Options for Host Subarea)</b></h3>
+    </body>
+</html>
